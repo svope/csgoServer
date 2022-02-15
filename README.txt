@@ -39,3 +39,12 @@ console commands:
 - check here: https://totalcsgo.com/commands
 
 
+How to use (when connected as player on server):
+rcon_password "password for rcon"
+rcon "some command or alias"
+
+e.g.
+rcon_password absa
+rcon compD          // start competetive mode on de_dust2
+
+
