@@ -16,9 +16,9 @@ fy_pool_day:
 host_workshop_map 122521875
 
 
-without download aliases for these maps won't work!!!!
+without downloading these maps "aliases.cfg" for these maps won't work!!!!
 
-
+What is:
 configs in /maps/cfg
 -> needed for "custom" game mode. In our case the knives round.
 
@@ -30,5 +30,12 @@ file "autoexec.cfg"
 
 files "gamemode_*_server.cfg"
 - files with "_server " overwrites base configs
-- but I think the "gamemodes_server.txt" must be created in csgo folder. It is also recommended as base configs are rewritten with csgo update
+- for changing gamemodes "gamemodes_server.txt" must be created in csgo folder
+- it is recommended to create these "_server" configs as base configs could be rewritten by any csgo update
+- more info about game modes: https://developer.valvesoftware.com/wiki/CS:GO_Game_Mode_Commands
+- more info about gamemodes_server: https://developer.valvesoftware.com/wiki/Counter-Strike:_Global_Offensive_Dedicated_Servers
+
+console commands:
+- check here: https://totalcsgo.com/commands
+
 
