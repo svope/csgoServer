@@ -1,0 +1,276 @@
+// To use this file, rename it to GameModes_Server.txt
+//
+// Values here override the default gamemodes.txt 
+
+"GameModes_Server.txt"{"gameTypes"{"classic"{"gameModes"{
+
+/////////////////////////////////////////
+// COMPETITIVE
+/////////////////////////////////////////
+"competitive"
+				{
+					"value"				"1"
+					"nameID"			"#SFUI_GameModeCompetitive"
+					"descID"			"#SFUI_GameModeCompetitiveDesc"
+					"descID_List"		"#SFUI_GameModeCompetitiveDescList"
+					"uid"				"2"
+					"maxplayers"		"32"
+
+					"show_rich_presence_map_game"  "#SFUI_Lobby_StatusRichPresenceSeparator_classic_competitive"
+					"show_rich_presence_map_watch" "#SFUI_Lobby_StatusRichPresenceSeparator_classic_competitive"
+					"show_rich_presence_map_review" "#SFUI_Lobby_StatusRichPresenceSeparator_classic_competitive"
+				
+					// These are the descriptive ui elements to display in the information box on.
+					// These key/values should be pairs of strings.  The "key" will appear in the left
+					// column, the "value" will appear in the right column.
+					"ui"
+					{
+						"0"		{ "label" "#SFUI_CashColon"				"value" "$800" }
+						"1"		{ "label" "#SFUI_WinMatchColon"			"value" "30 #SFUI_Rounds" }
+						"2"		{ "label" "#SFUI_TimePerRoundColon"		"value" "2 #SFUI_Minutes" }
+						"3"		{ "label" "#SFUI_BuyTimeColon"			"value" "45 #SFUI_Seconds" }
+						"4"		{ "label" "#SFUI_SpectateColon"			"value" "#SFUI_SpectateTeamOnly" }
+						"5"		{ "label" "#SFUI_BotsColon"				"value" "#SFUI_BotDifficulty3" }
+					}
+
+					// These are the configs that get executed when a game mode of this type is created
+					"exec"
+					{
+						"exec" "gamemode_competitive.cfg"
+						"exec" "gamemode_competitive_server.cfg"
+					}
+					
+					// Map groups for offline modes
+					"mapgroupsSP"
+					{
+						"random_classic"	"0"
+						
+						// Active Duty maps
+						"mg_de_mirage"		"1"
+						"mg_de_inferno"		"2"
+						"mg_de_overpass"	"3"
+						"mg_de_vertigo"		"4"
+						"mg_de_nuke"		"5"
+						"mg_de_train"		"6"
+						"mg_de_dust2"		"7"
+						
+						// reserves maps
+						"mg_de_ancient"		"8"
+						"mg_de_engage"		"9"
+						"mg_cs_apollo"		"10"
+						"mg_de_anubis"		"11"
+						"mg_de_cache"		"12"
+						"mg_cs_agency"		"13"
+						"mg_cs_office"		"14"
+					}
+
+					// Map groups for online modes
+					"mapgroupsMP"
+					{
+						// Active Duty maps
+						"mg_de_mirage"		"0"
+						"mg_de_inferno"		"1"
+						"mg_de_overpass"	"2"
+						"mg_de_vertigo"		"3"
+						"mg_de_nuke"		"4"
+						"mg_de_train"		"5"
+						"mg_de_dust2"		"6"
+						
+						// reserves maps
+						"mg_de_anubis"		"7"
+						"mg_de_cache"		"8"
+						"mg_cs_agency"		"9"
+						"mg_cs_office"		"10"
+
+						// scrimmage maps
+						"mg_de_ancient"		"11"
+						"mg_de_engage"		"12"
+						"mg_cs_apollo"		"13"
+
+						// team lobby map veto
+						"mg_lobby_mapveto"	"14"
+					}
+				}
+/////////////////////////////////////////
+// CASUAL
+/////////////////////////////////////////
+"casual"{
+
+
+
+		"maxplayers"		"32"
+
+		"exec"
+		{
+			"exec"					"gamemode_casual.cfg"
+			"exec"					"gamemode_casual_server.cfg"
+		}
+
+		"mapgroupsMP"						// List of mapgroups valid for this game mode ( casual )
+		{
+			"mg_bomb_se"		""
+		}
+
+
+
+}}}"gungame"{"gameModes"{
+
+/////////////////////////////////////////
+// ARMS RACE
+/////////////////////////////////////////
+"gungameprogressive"{
+
+
+
+		"maxplayers"			"32"
+
+		// These are the configs that get executed when a game mode of this type is created
+		"exec"
+		{
+			"exec"					"server_last.cfg"
+		}
+					
+		"mapgroupsMP"
+		{
+			"mg_armsrace"	""
+		}
+		
+		
+		"weaponprogression_ct"
+					{
+						"bizon"			{ "kills"	"1" }
+						"ump45"			{ "kills"	"1" }
+						"p90"			{ "kills"	"1" }
+						"nova"			{ "kills"	"1" }
+						"mag7"			{ "kills"	"1" }
+						"xm1014"		{ "kills"	"1" }
+						"sawedoff"		{ "kills"	"1" }
+						"galilar"		{ "kills"	"1" }
+						"ak47"			{ "kills"	"1" }
+						"m4a1"			{ "kills"	"1" }
+						"sg556"			{ "kills"	"1" }
+						"aug"			{ "kills"	"1" }
+						"awp"			{ "kills"	"1" }
+						"scar20"		{ "kills"	"1" }
+						"negev"			{ "kills"	"1" }
+						"tec9"			{ "kills"	"1" }
+						"p250"			{ "kills"	"1" }
+						"deagle"		{ "kills"	"1" }
+						"fiveseven"		{ "kills"	"1" }
+						"elite"			{ "kills"	"1" }
+						"knifegg"		{ "kills"	"1" }
+					}
+					
+					"weaponprogression_t"
+					{
+						"bizon"			{ "kills"	"1" }
+						"ump45"			{ "kills"	"1" }
+						"p90"			{ "kills"	"1" }
+						"nova"			{ "kills"	"1" }
+						"mag7"			{ "kills"	"1" }
+						"xm1014"		{ "kills"	"1" }
+						"sawedoff"		{ "kills"	"1" }
+						"galilar"		{ "kills"	"1" }
+						"ak47"			{ "kills"	"1" }
+						"m4a1"			{ "kills"	"1" }
+						"sg556"			{ "kills"	"1" }
+						"aug"			{ "kills"	"1" }
+						"awp"			{ "kills"	"1" }
+						"scar20"		{ "kills"	"1" }
+						"negev"			{ "kills"	"1" }
+						"tec9"			{ "kills"	"1" }
+						"p250"			{ "kills"	"1" }
+						"deagle"		{ "kills"	"1" }
+						"fiveseven"		{ "kills"	"1" }
+						"elite"			{ "kills"	"1" }
+						"knifegg"		{ "kills"	"1" }
+					}
+
+
+
+/////////////////////////////////////////
+// DEMOLITION
+/////////////////////////////////////////
+"gungametrbomb"
+{
+
+
+		"maxplayers"			"32"
+
+		// These are the configs that get executed when a game mode of this type is created
+		"exec"
+		{
+			"exec"					"server_last.cfg"
+		}
+
+		"mapgroupsMP"
+		{
+			"mg_demolition"		""
+		}
+
+		"weaponprogression_ct"
+		{
+			"m4a1"			{ "kills"	"1" }
+			"awp"			{ "kills"	"1" }
+			"Scar20"		{ "kills"	"1" }
+		}
+			
+		"weaponprogression_t"
+		{
+			"ak47"			{ "kills"	"1" }
+			"awp"			{ "kills"	"1" }
+			"g3sg1"			{ "kills"	"1" }
+		}
+
+
+}
+"deathmatch"
+				{
+					"maxplayers"		"32"
+
+					// These are the configs that get executed when a game mode of this type is created
+					"exec"
+					{
+						"exec" "gamemode_deathmatch.cfg"
+						"exec" "gamemode_deathmatch_server.cfg"
+					}
+				}
+}}}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Map groups
+//
+// To use a mapgroup, it needs to be defined in a keyvalues
+// block such as the example below, as well as listed in the 
+// 'mapgroupsMP' block within the game mode that will run it,
+// such as the example above.
+//
+// Then launch the server with '+mapgroup MAPGROUPNAME'
+//
+// Example:
+//
+// srcds -game csgo +game_mode 1 +mapgroup mg_bomb_se +map de_nuke_se
+//
+//
+// Check the developer wiki for updated community info
+// https://developer.valvesoftware.com/wiki/Counter-Strike:_Global_Offensive_Dedicated_Servers
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	"mapgroups"
+	{
+		"mg_bomb_se"									// mapgroup definition
+		{
+			"name"			"mg_bomb_se"
+			"maps"
+			{
+				"de_dust_se"		""
+				"de_dust2_se"		""
+				"de_nuke_se"		""
+				"de_train_se"		""
+				"de_inferno_se"		""
+				"de_aztec_se"		""
+			}
+		}
+	}
+}}
